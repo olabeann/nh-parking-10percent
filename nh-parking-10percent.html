@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>연 10% 적금, 진짜 나왔습니다 | 영등포농협 NH파킹모아적금</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<style>
+  :root{
+    --bg:#F5F7FB;
+    --surface:#FFFFFF;
+    --ink:#1B1F2A;
+    --ink-2:#4A5163;
+    --ink-3:#8A91A3;
+    --line:#E6EAF2;
+    --blue:#2457F5;
+    --blue-soft:#EAF0FF;
+    --sky:#48B4F5;
+    --purple:#8B5CF6;
+    --purple-soft:#F1ECFF;
+    --mint:#12B886;
+    --ig: linear-gradient(90deg,#515BD4 0%,#8134AF 28%,#DD2A7B 55%,#F58529 85%,#FEDA77 100%);
+    --radius-l:24px;
+    --radius-m:18px;
+    --radius-s:12px;
+    --shadow:0 6px 24px rgba(36,87,245,.07);
+    --fs-hero:clamp(1.75rem, 1.2rem + 2.6vw, 2.9rem);
+    --fs-h2:clamp(1.3rem, 1.05rem + 1.1vw, 1.8rem);
+    --fs-h3:clamp(1.05rem, .98rem + .4vw, 1.25rem);
+    --fs-body:clamp(.95rem, .92rem + .15vw, 1.03rem);
+    --fs-small:clamp(.8rem, .78rem + .1vw, .88rem);
+    --fs-num:clamp(2rem, 1.5rem + 2.2vw, 3rem);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+  html{scroll-behavior:smooth;scroll-padding-top:calc(16px + env(safe-area-inset-top,0px))}
+  body{
+    font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;
+    background:var(--bg);color:var(--ink);font-size:var(--fs-body);line-height:1.65;
+    word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+  :focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:8px}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+  /* ===== Instagram banner ===== */
+  .ig-banner{background:var(--ig);color:#fff}
+  .ig-banner .wrap{
+    display:flex;align-items:center;justify-content:center;gap:12px 20px;flex-wrap:wrap;
+    padding-top:14px;padding-bottom:14px;text-align:center;
+  }
+  .ig-banner p{font-weight:800;font-size:clamp(1rem,.95rem + .35vw,1.2rem);letter-spacing:-.01em;text-shadow:0 1px 2px rgba(0,0,0,.12)}
+  .ig-pill{
+    display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:6px 20px 6px 14px;
+    background:#fff;border-radius:999px;box-shadow:0 4px 14px rgba(80,20,90,.22);
+    font-weight:700;font-size:clamp(.9rem,.88rem + .15vw,1rem);transition:transform .15s ease;
+  }
+  .ig-pill:hover{transform:translateY(-1px)}
+  .ig-pill:active{transform:scale(.97)}
+  .ig-pill svg{width:24px;height:24px;flex:none}
+  .ig-handle{background:var(--ig);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:800}
+  .ig-follow{color:#111}
+  @media (max-width:560px){
+    .ig-banner .wrap{flex-direction:column;gap:10px;padding-top:16px;padding-bottom:16px}
+    .ig-pill{width:100%;max-width:320px;justify-content:center}
+  }
+
+  /* ===== Sections ===== */
+  section{padding:clamp(44px,6vw,80px) 0 0}
+  .sec-title{font-size:var(--fs-h2);font-weight:800;letter-spacing:-.025em;line-height:1.35;margin-bottom:8px}
+  .sec-desc{color:var(--ink-2);margin-bottom:24px;max-width:62ch}
+  .grid{display:grid;gap:16px;grid-template-columns:1fr}
+  @media (min-width:680px){.g2,.g3{grid-template-columns:repeat(2,1fr)}}
+  @media (min-width:1000px){.g3{grid-template-columns:repeat(3,1fr)}}
+
+  .card{background:var(--surface);border-radius:var(--radius-l);padding:clamp(20px,3vw,28px);border:1px solid var(--line)}
+  .soft{background:var(--blue-soft);border:0}
+
+  /* ===== Hero ===== */
+  .hero{padding-top:clamp(36px,5vw,64px)}
+  .hero-top{display:grid;gap:20px;align-items:end;margin-bottom:28px}
+  .hero .date{display:inline-flex;align-items:center;gap:6px;font-size:var(--fs-small);font-weight:600;color:var(--blue);background:var(--blue-soft);padding:6px 12px;border-radius:999px;margin-bottom:14px}
+  .hero h1{font-size:var(--fs-hero);line-height:1.28;font-weight:800;letter-spacing:-.035em}
+  .hero-lead{color:var(--ink-2);max-width:46ch}
+  @media (min-width:900px){.hero-top{grid-template-columns:1.3fr 1fr}}
+
+  .hcard{border-radius:var(--radius-l);padding:26px 24px;min-height:210px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;gap:18px}
+  .hcard .k{font-size:var(--fs-small);font-weight:600;opacity:.85}
+  .hcard h3{font-size:var(--fs-h3);font-weight:700;margin-top:4px}
+  .hcard .num{font-size:var(--fs-num);font-weight:800;letter-spacing:-.04em;line-height:1}
+  .hcard .num small{font-size:.42em;font-weight:700;margin-right:4px;letter-spacing:0}
+  .hcard .note{font-size:var(--fs-small);opacity:.85}
+  .hcard .emoji{position:absolute;right:18px;top:18px;font-size:clamp(2.6rem,2rem + 2vw,3.4rem);filter:drop-shadow(0 8px 14px rgba(0,0,0,.18))}
+  .h-blue{background:linear-gradient(145deg,#2E63FF,#1E46D8);color:#fff}
+  .h-purple{background:linear-gradient(145deg,#9B6BFF,#7B4BEA);color:#fff}
+  .h-white{background:var(--surface);border:1px solid var(--line)}
+  .h-white .num{color:var(--blue)}
+  .footnote{font-size:var(--fs-small);color:var(--ink-3);margin-top:12px}
+
+  /* ===== Flow ===== */
+  .flow{display:grid;gap:12px;grid-template-columns:1fr;align-items:stretch}
+  .flow .plus{display:grid;place-items:center;font-size:1.6rem;font-weight:800;color:var(--ink-3)}
+  @media (min-width:800px){.flow{grid-template-columns:1fr auto 1fr}}
+  .flow .card h3{font-size:var(--fs-h3);font-weight:800;margin:10px 0 6px}
+  .flow .card p{color:var(--ink-2)}
+  .tag{display:inline-block;font-size:var(--fs-small);font-weight:700;padding:4px 10px;border-radius:999px}
+  .t-blue{background:var(--blue-soft);color:var(--blue)}
+  .t-purple{background:var(--purple-soft);color:var(--purple)}
+  .point{margin-top:16px;border-radius:var(--radius-m);padding:20px 22px;background:linear-gradient(90deg,#FFF6D9,#FFEFD1);display:flex;gap:14px;align-items:flex-start}
+  .point .ico{font-size:1.6rem;line-height:1}
+  .point strong{display:block;font-size:var(--fs-h3);margin-bottom:4px}
+  .point p{color:#6A5320}
+
+  /* ===== Explainer list (like 모으고/쓰고) ===== */
+  .list-card{padding:8px 22px}
+  .li{display:flex;align-items:center;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+  .li:last-child{border-bottom:0}
+  .li .i{width:40px;height:40px;border-radius:12px;background:var(--bg);display:grid;place-items:center;font-size:1.2rem;flex:none}
+  .li b{display:block}
+  .li span{color:var(--ink-2);font-size:var(--fs-small)}
+
+  /* ===== Product ===== */
+  .product-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:6px}
+  .official{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 18px;border-radius:999px;background:var(--ink);color:#fff;font-weight:700;font-size:var(--fs-small)}
+  .official:hover{background:var(--blue)}
+  .info{display:grid;gap:10px;grid-template-columns:1fr}
+  @media (min-width:600px){.info{grid-template-columns:repeat(2,1fr)}}
+  .info div{background:var(--bg);border-radius:var(--radius-s);padding:14px 16px}
+  .info dt{font-size:var(--fs-small);color:var(--ink-3);font-weight:600}
+  .info dd{font-weight:700;margin-top:2px}
+
+  .tbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:var(--radius-m);border:1px solid var(--line);background:var(--surface)}
+  table{width:100%;min-width:460px;border-collapse:collapse}
+  th,td{padding:14px 18px;text-align:left;white-space:nowrap}
+  thead th{background:var(--blue-soft);color:var(--blue);font-size:var(--fs-small);font-weight:700}
+  tbody tr+tr td{border-top:1px solid var(--line)}
+  td.r{font-weight:800;color:var(--ink)}
+  td.hi{color:var(--blue)}
+  .scroll-hint{font-size:var(--fs-small);color:var(--ink-3);margin:8px 2px 0}
+  @media (min-width:700px){.scroll-hint{display:none}}
+
+  .sum{border-radius:var(--radius-m);padding:22px;background:var(--surface);border:1px solid var(--line)}
+  .sum-row{display:flex;justify-content:space-between;gap:12px;padding:10px 0;color:var(--ink-2)}
+  .sum-row b{color:var(--ink)}
+  .sum-total{display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-top:2px dashed var(--line);margin-top:6px;padding-top:14px;font-weight:800}
+  .sum-total span:last-child{font-size:clamp(1.5rem,1.2rem + 1.2vw,2rem);color:var(--blue);letter-spacing:-.03em}
+  .sum-total.p span:last-child{color:var(--purple)}
+  .mini{font-size:var(--fs-small);color:var(--ink-3);margin-top:10px}
+  .stack{display:grid;gap:16px}
+  h3.sub{font-size:var(--fs-h3);font-weight:800;margin:28px 0 12px}
+
+  /* ===== Strategy ===== */
+  .strategy{background:linear-gradient(135deg,#1E46D8,#5B3BE0);color:#fff;border-radius:var(--radius-l);padding:clamp(24px,4vw,40px);display:grid;gap:24px}
+  @media (min-width:900px){.strategy{grid-template-columns:1.1fr 1fr;align-items:center}}
+  .strategy h2{font-size:var(--fs-h2);font-weight:800;line-height:1.35;letter-spacing:-.02em}
+  .strategy p{opacity:.9;margin-top:10px}
+  .steps{display:grid;gap:10px}
+  .step{background:rgba(255,255,255,.12);border-radius:var(--radius-s);padding:14px 16px;display:flex;gap:12px;align-items:flex-start}
+  .step em{font-style:normal;flex:none;width:28px;height:28px;border-radius:50%;background:#fff;color:var(--blue);font-weight:800;display:grid;place-items:center;font-size:.85rem}
+  .result{background:#fff;color:var(--ink);border-radius:var(--radius-m);padding:16px 18px}
+  .result .big{font-size:clamp(1.6rem,1.3rem + 1.4vw,2.2rem);font-weight:800;color:var(--blue);letter-spacing:-.03em}
+  .result small{display:block;color:var(--ink-3);font-size:var(--fs-small);margin-top:4px;line-height:1.5}
+
+  /* ===== Events (bottom tile row like reference) ===== */
+  .ev{border-radius:var(--radius-m);padding:22px;min-height:200px;display:flex;flex-direction:column;gap:10px;position:relative;overflow:hidden}
+  .ev .lab{font-size:var(--fs-small);font-weight:600;opacity:.8}
+  .ev h3{font-size:var(--fs-h3);font-weight:800;line-height:1.4}
+  .ev ul{list-style:none;display:grid;gap:4px;font-size:var(--fs-small)}
+  .ev .em{font-size:2.4rem;line-height:1}
+  .e1{background:#8FB5FF;color:#0E1F4D}
+  .e2{background:#5BC4F5;color:#07334A}
+  .e3{background:#B07CF7;color:#fff}
+  .ev-table{margin-top:16px}
+
+  /* ===== Checklist ===== */
+  .check-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+  .progress{flex:1;min-width:160px;max-width:320px}
+  .progress-bar{height:10px;border-radius:999px;background:var(--line);overflow:hidden}
+  .progress-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--purple));transition:width .3s ease}
+  .progress small{display:block;text-align:right;font-size:var(--fs-small);color:var(--ink-2);margin-top:4px;font-weight:600}
+  .checks{list-style:none;display:grid;gap:10px;grid-template-columns:1fr}
+  @media (min-width:760px){.checks{grid-template-columns:repeat(2,1fr)}}
+  .checks label{display:flex;gap:14px;align-items:flex-start;min-height:56px;padding:16px 18px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-m);cursor:pointer;transition:border-color .15s,background .15s}
+  .checks input{position:absolute;opacity:0;pointer-events:none}
+  .box{flex:none;width:26px;height:26px;border-radius:8px;border:2px solid #C9D1E2;display:grid;place-items:center;margin-top:1px;transition:.15s}
+  .box svg{width:16px;height:16px;opacity:0}
+  .checks input:checked + label{border-color:var(--blue);background:#F6F9FF}
+  .checks input:checked + label .box{background:var(--blue);border-color:var(--blue)}
+  .checks input:checked + label .box svg{opacity:1}
+  .checks input:focus-visible + label{outline:3px solid var(--blue);outline-offset:2px}
+  .checks b{display:block}
+  .checks span.d{font-size:var(--fs-small);color:var(--ink-2)}
+
+  /* ===== FAQ ===== */
+  .faq{display:grid;gap:10px}
+  .faq-item{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-m);overflow:hidden}
+  .faq-q{width:100%;min-height:60px;display:flex;align-items:center;gap:12px;padding:16px 20px;text-align:left;font-weight:700;font-size:var(--fs-body)}
+  .faq-q .q{color:var(--blue);font-weight:800;flex:none}
+  .faq-q .t{flex:1}
+  .faq-q .chev{flex:none;width:32px;height:32px;border-radius:50%;background:var(--bg);display:grid;place-items:center;transition:transform .25s ease}
+  .faq-item.open .chev{transform:rotate(180deg);background:var(--blue-soft)}
+  .faq-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .28s ease}
+  .faq-item.open .faq-a{grid-template-rows:1fr}
+  .faq-a > div{overflow:hidden}
+  .faq-a p{padding:0 20px 20px 46px;color:var(--ink-2)}
+
+  /* ===== Links ===== */
+  .links{display:grid;gap:12px;grid-template-columns:1fr}
+  @media (min-width:680px){.links{grid-template-columns:repeat(2,1fr)}}
+  .link-btn{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:76px;padding:18px 22px;border-radius:var(--radius-m);font-weight:700;transition:transform .15s}
+  .link-btn:hover{transform:translateY(-2px)}
+  .link-btn small{display:block;font-weight:500;font-size:var(--fs-small);opacity:.85}
+  .link-btn .arr{flex:none;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.2);display:grid;place-items:center}
+  .lb1{background:var(--blue);color:#fff}
+  .lb2{background:var(--purple);color:#fff}
+
+  /* ===== Notice ===== */
+  .notice{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:18px 0;border-top:1px solid var(--line);margin-top:clamp(44px,6vw,72px)}
+  .notice strong{display:flex;align-items:center;gap:6px;font-weight:800;flex:none}
+  .notice p{flex:1;min-width:200px;font-size:var(--fs-small);color:var(--ink-2)}
+  .notice time{font-size:var(--fs-small);color:var(--ink-3)}
+  footer{padding:20px 0 36px;font-size:var(--fs-small);color:var(--ink-3)}
+
+
+  /* ===== Rate stack ===== */
+  .stack-wrap{margin-top:20px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-l);padding:clamp(20px,3vw,28px)}
+  .stack-wrap h2{font-size:var(--fs-h3);font-weight:800;margin-bottom:14px}
+  .stackbar{display:flex;height:52px;border-radius:14px;overflow:hidden;gap:3px}
+  .stackbar span{display:grid;place-items:center;color:#fff;font-weight:800;font-size:var(--fs-small);white-space:nowrap}
+  .s1{background:var(--blue);flex:45}.s2{background:var(--purple);flex:45}.s3{background:var(--sky);flex:5}.s4{background:var(--mint);flex:5}
+  .legend{list-style:none;display:grid;gap:8px 16px;grid-template-columns:1fr;margin-top:14px}
+  @media (min-width:680px){.legend{grid-template-columns:repeat(2,1fr)}}
+  @media (min-width:1000px){.legend{grid-template-columns:repeat(4,1fr)}}
+  .legend li{display:flex;align-items:center;gap:10px;font-size:var(--fs-small);color:var(--ink-2)}
+  .legend i{width:12px;height:12px;border-radius:4px;flex:none}
+  .legend b{color:var(--ink);margin-left:auto}
+  .cond{display:flex;flex-direction:column;gap:10px}
+  .cond .ci{font-size:2rem;line-height:1}
+  .cond h3{font-size:var(--fs-h3);font-weight:800}
+  .cond p{color:var(--ink-2)}
+  .cond .plus-rate{margin-top:auto;font-size:clamp(1.5rem,1.2rem + 1.2vw,2rem);font-weight:800;letter-spacing:-.03em}
+  .cond a.more{display:inline-flex;align-items:center;min-height:44px;font-weight:700;color:var(--purple)}
+  .limit-badge{display:inline-flex;align-items:center;gap:6px;background:#FFF0F0;color:#E0364F;font-weight:700;font-size:var(--fs-small);padding:6px 12px;border-radius:999px;margin-left:8px}
+
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<!-- ===== Instagram banner (top) ===== -->
+<aside class="ig-banner" aria-label="인스타그램 팔로우 안내">
+  <div class="wrap">
+    <p>더 많은 꿀정보 얻고 싶다면?</p>
+    <a class="ig-pill" href="https://www.instagram.com/startup_tip_" target="_blank" rel="noopener noreferrer" aria-label="인스타그램 startup_tip_ 팔로우하기 (새 탭)">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="igg1" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#FEDA77"/><stop offset=".3" stop-color="#F58529"/><stop offset=".6" stop-color="#DD2A7B"/><stop offset=".85" stop-color="#8134AF"/><stop offset="1" stop-color="#515BD4"/></linearGradient></defs><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="url(#igg1)" stroke-width="2.2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="url(#igg1)" stroke-width="2.2"/><circle cx="17.4" cy="6.6" r="1.35" fill="url(#igg1)"/></svg>
+      <span class="ig-handle">startup_tip_</span>
+      <span class="ig-follow">팔로우하기</span>
+    </a>
+  </div>
+</aside>
+
+<main id="top">
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-top">
+        <div>
+          <span class="date">📅 2026년 9월 4일 출시 · 영등포농협 NH파킹모아적금</span>
+          <h1>연 10% 적금,<br>진짜 나왔습니다</h1>
+        </div>
+        <p class="hero-lead">기본금리 연 4.5%에 파킹통장 평균잔액과 비대면·자동이체 조건을 채우면 최고 연 10%까지 받을 수 있어요. 월 최대 100만원까지 넣을 수 있고, 선착순 1만 계좌만 열려요.</p>
+      </div>
+
+      <div class="grid g3">
+        <article class="hcard h-purple">
+          <span class="emoji" aria-hidden="true">💰</span>
+          <div><span class="k">금리</span><h3>우대조건 모두 채우면</h3></div>
+          <div><div class="num"><small>최고 연</small>10%</div><p class="note">기본 4.5% + 우대 최대 5.5% (세전)</p></div>
+        </article>
+        <article class="hcard h-blue">
+          <span class="emoji" aria-hidden="true">📥</span>
+          <div><span class="k">납입</span><h3>1년 만기 자유적립</h3></div>
+          <div><div class="num"><small>월 최대</small>100만원</div><p class="note">연간 최대 1,200만원 · 1천원부터</p></div>
+        </article>
+        <article class="hcard h-white">
+          <span class="emoji" aria-hidden="true">⏳</span>
+          <div><span class="k" style="color:var(--ink-2)">판매한도</span><h3>소진되면 판매 종료</h3></div>
+          <div><div class="num"><small style="color:var(--ink-2)">선착순</small>1만 계좌</div><p class="note" style="color:var(--ink-2)">1인 1계좌 · NH콕뱅크 비대면 가입</p></div>
+        </article>
+      </div>
+
+      <div class="stack-wrap">
+        <h2>연 10%는 이렇게 쌓여요</h2>
+        <div class="stackbar" role="img" aria-label="기본금리 4.5%, 파킹통장 평균잔액 우대 4.5%, 비대면 0.5%, 자동이체 0.5%, 합계 연 10%">
+          <span class="s1">4.5%</span><span class="s2">+4.5%</span><span class="s3"></span><span class="s4"></span>
+        </div>
+        <ul class="legend">
+          <li><i style="background:var(--blue)"></i>기본금리<b>연 4.5%</b></li>
+          <li><i style="background:var(--purple)"></i>파킹통장 평균잔액 우대<b>최대 +4.5%</b></li>
+          <li><i style="background:var(--sky)"></i>비대면 가입<b>최대 +0.5%</b></li>
+          <li><i style="background:var(--mint)"></i>자동이체 4회 이상<b>최대 +0.5%</b></li>
+        </ul>
+      </div>
+      <p class="footnote">※ 세전 연이율, 2026년 9월 4일 기준이에요. 기본금리는 가입 시점의 자유적립적금 12개월 이율이라 달라질 수 있으니 가입 전 NH콕뱅크에서 확인하세요.</p>
+    </div>
+  </section>
+
+  <!-- ===== Conditions ===== -->
+  <section id="how">
+    <div class="wrap">
+      <h2 class="sec-title">연 10% 받으려면 이 3가지를 채우세요</h2>
+      <p class="sec-desc">우대금리 5.5% 중 4.5%가 파킹통장에서 나와요. 적금만 가입해서는 10%가 안 되는 이유예요.</p>
+      <div class="grid g3">
+        <article class="card cond" style="border-color:var(--purple)">
+          <span class="ci" aria-hidden="true">🅿️</span>
+          <h3>파킹통장 평균잔액 유지</h3>
+          <p>NH개인파킹통장의 6개월 평균잔액이 1,000만원을 넘으면 최대 우대를 받아요. 잔액이 적어도 50만원 초과부터 +3.0%가 붙어요.</p>
+          <div class="plus-rate" style="color:var(--purple)">최대 +4.5%</div>
+          <a class="more" href="#parking">잔액 구간별 우대 보기 ↓</a>
+        </article>
+        <article class="card cond">
+          <span class="ci" aria-hidden="true">📱</span>
+          <h3>비대면으로 가입</h3>
+          <p>NH콕뱅크 앱으로 가입하면 받는 우대예요. 이 상품은 비대면 전용이라 앱으로 가입하면 자연스럽게 채워져요.</p>
+          <div class="plus-rate" style="color:var(--sky)">최대 +0.5%</div>
+        </article>
+        <article class="card cond">
+          <span class="ci" aria-hidden="true">🔁</span>
+          <h3>자동이체 4회 이상</h3>
+          <p>만기일 전일까지 자동이체 납입 실적이 4회 이상이면 받아요. 가입할 때 매월 자동이체를 걸어두면 끝이에요.</p>
+          <div class="plus-rate" style="color:var(--mint)">최대 +0.5%</div>
+        </article>
+      </div>
+      <div class="point">
+        <span class="ico" aria-hidden="true">💡</span>
+        <div>
+          <strong>파킹통장과 적금은 동시에 가입하세요</strong>
+          <p>적금은 파킹통장이 있어야 가입할 수 있고, 두 상품은 동시에 가입돼요. 평균잔액 우대금리는 적금 만기 때 적용돼요.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Product 2 ===== -->
+  <section id="moa">
+    <div class="wrap">
+      <div class="product-head">
+        <h2 class="sec-title" style="margin:0">NH파킹모아적금 상세</h2><span class="limit-badge">⏳ 선착순 10,000좌</span>
+        <a class="official" href="https://ydpnonghyup.com/event/moa" target="_blank" rel="noopener noreferrer">공식 페이지 바로가기 ↗</a>
+      </div>
+      <p class="sec-desc">파킹통장을 잘 유지할수록 금리가 높아지는 1년 만기 연계형 적금이에요.</p>
+
+      <dl class="info">
+        <div><dt>납입한도</dt><dd>월 최대 100만원 · 연간 최대 1,200만원</dd></div>
+        <div><dt>판매한도</dt><dd>총 10,000좌 (소진 시 종료)</dd></div>
+        <div><dt>가입기간</dt><dd>1년 만기</dd></div>
+        <div><dt>납입금액</dt><dd>1천원 이상 ~ 100만원 이하</dd></div>
+        <div><dt>가입대상</dt><dd>NH개인파킹통장 보유 개인 (1인 1계좌)</dd></div>
+        <div><dt>가입방법</dt><dd>NH콕뱅크 (비대면)</dd></div>
+      </dl>
+      <p class="footnote">※ 기본금리 연 4.5% (26.09.04 기준)는 신규 가입일 현재 해당 농·축협 자유적립적금 12개월 이율이 적용돼 가입 시점에 따라 달라질 수 있어요.</p>
+
+      <h3 class="sub">파킹통장 6개월 평균잔액에 따른 우대금리</h3>
+      <div class="tbl-wrap" role="region" aria-label="평균잔액별 적금 우대금리 표" tabindex="0">
+        <table>
+          <thead><tr><th>파킹통장 6개월 평균잔액</th><th>적금 우대금리</th><th>기본금리 포함</th></tr></thead>
+          <tbody>
+            <tr><td>50만원 초과 ~ 200만원 이하</td><td class="r">+3.0%</td><td>연 7.5%</td></tr>
+            <tr><td>200만원 초과 ~ 500만원 이하</td><td class="r">+3.5%</td><td>연 8.0%</td></tr>
+            <tr><td>500만원 초과 ~ 1,000만원 이하</td><td class="r">+4.0%</td><td>연 8.5%</td></tr>
+            <tr><td>1,000만원 초과</td><td class="r hi">+4.5%</td><td class="r hi">연 9.0%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="scroll-hint">← 표를 옆으로 밀어서 확인하세요 →</p>
+
+      <div class="grid g2" style="margin-top:16px">
+        <div class="card" style="background:var(--purple-soft);border:0">
+          <span class="tag" style="background:#fff;color:var(--purple)">추가 우대금리 최대 +1.0%</span>
+          <ul style="list-style:none;display:grid;gap:8px;margin-top:14px">
+            <li>✔️ 비대면 가입: 최대 연 +0.5%</li>
+            <li>✔️ 만기일 전일까지 자동이체 실적 4회 이상: 최대 연 +0.5%</li>
+          </ul>
+          <p class="mini" style="color:var(--ink-2)">※ 선납이연은 불가해요. 납입한도를 넘겨 연간 한도(1,200만원) 안의 금액을 미리 넣을 수 없어요.</p>
+        </div>
+        <div class="sum">
+          <div class="sum-row"><span>기본금리</span><b>연 4.5%</b></div>
+          <div class="sum-row"><span>평균잔액 우대 (최대)</span><b>연 4.5%</b></div>
+          <div class="sum-row"><span>추가 우대 (최대)</span><b>연 1.0%</b></div>
+          <div class="sum-total p"><span>최고 금리</span><span>연 10%</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== What is parking account ===== -->
+  <section>
+    <div class="wrap grid g2" style="align-items:center">
+      <div>
+        <h2 class="sec-title">파킹통장이란?</h2>
+        <p class="sec-desc" style="margin-bottom:0">돈을 잠시 주차하듯 보관하는 입출금통장이에요. 생활비나 비상금처럼 당장 쓰지 않는 돈을 넣어두고 이자를 받기 좋아요.</p>
+      </div>
+      <div class="card list-card">
+        <div class="li"><span class="i" aria-hidden="true">🔓</span><div><b>묶어둘 필요 없어요</b><span>예·적금과 달리 기간 제한 없이 자유롭게 입출금</span></div></div>
+        <div class="li"><span class="i" aria-hidden="true">📆</span><div><b>하루만 맡겨도 이자</b><span>일별 잔액 기준으로 이자를 계산해요</span></div></div>
+        <div class="li"><span class="i" aria-hidden="true">🧺</span><div><b>여유자금 보관에 딱</b><span>생활비·비상금을 두면서 이자 혜택까지</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Product 1 ===== -->
+  <section id="parking">
+    <div class="wrap">
+      <div class="product-head">
+        <h2 class="sec-title" style="margin:0">NH개인파킹통장: 10%의 열쇠</h2>
+        <a class="official" href="https://ydpnonghyup.com/event/parking" target="_blank" rel="noopener noreferrer">공식 페이지 바로가기 ↗</a>
+      </div>
+      <p class="sec-desc">적금 가입의 조건이자 우대금리 4.5%의 기준이에요. 넣어둔 돈에도 매일 이자가 붙어 최고 연 4.5%를 받아요.</p>
+
+      <dl class="info">
+        <div><dt>가입대상</dt><dd>개인 (전 농·축협 1인 1계좌)</dd></div>
+        <div><dt>상품유형</dt><dd>자립예탁금</dd></div>
+        <div><dt>가입방법</dt><dd>NH콕뱅크 (비대면)</dd></div>
+        <div><dt>이자 지급</dt><dd>매월 넷째 토요일 확정 → 다음 날 지급</dd></div>
+      </dl>
+
+      <h3 class="sub">기본금리 <span style="font-weight:500;color:var(--ink-3);font-size:var(--fs-small)">2026.09.04 기준 · 세전 · 일별 잔액 구간별 차등</span></h3>
+      <div class="tbl-wrap" role="region" aria-label="파킹통장 기본금리 표" tabindex="0">
+        <table>
+          <thead><tr><th>일별 잔액</th><th>기본금리</th><th>신규고객 우대</th><th>합계</th></tr></thead>
+          <tbody>
+            <tr><td>200만원 이하</td><td class="r">연 3.5%</td><td>+1.0%</td><td class="r hi">연 4.5%</td></tr>
+            <tr><td>200만원 초과 ~ 1,000만원 이하</td><td class="r">연 3.0%</td><td>-</td><td class="r">연 3.0%</td></tr>
+            <tr><td>1,000만원 초과 ~ 2,000만원 이하</td><td class="r">연 2.5%</td><td>-</td><td class="r">연 2.5%</td></tr>
+            <tr><td>2,000만원 초과</td><td class="r">연 0.1%</td><td>-</td><td class="r">연 0.1%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="scroll-hint">← 표를 옆으로 밀어서 확인하세요 →</p>
+
+      <div class="grid g2" style="margin-top:16px">
+        <div class="card soft">
+          <span class="tag" style="background:#fff;color:var(--blue)">신규고객 우대금리 +1.0%</span>
+          <ul style="list-style:none;display:grid;gap:8px;margin-top:14px">
+            <li>✔️ 적용기간: 가입일로부터 6개월</li>
+            <li>✔️ 적용구간: 200만원 이하 구간만</li>
+            <li>✔️ 기준: 예금 신규일 직전 1년간 입출금통장 보유이력이 없는 고객 (거래중지·휴면계좌는 보유이력에서 제외)</li>
+          </ul>
+        </div>
+        <div class="sum">
+          <div class="sum-row"><span>기본금리 (200만원 이하)</span><b>연 3.5%</b></div>
+          <div class="sum-row"><span>신규고객 우대</span><b>연 1.0%</b></div>
+          <div class="sum-total"><span>최고 금리</span><span>연 4.5%</span></div>
+          <p class="mini">가입 후 이자율이 바뀌면 해당일부터 바뀐 이자율이 적용돼요.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Strategy ===== -->
+  <section>
+    <div class="wrap">
+      <div class="strategy">
+        <div>
+          <h2>연 10% 제대로 받는 방법</h2>
+          <p>파킹통장에 1,000만원을 넘겨서 넣어두고, 적금은 매달 100만원씩 1년 넣는 방법이에요. 기준선에 딱 맞추기보다 1,010만원처럼 여유 있게 두는 게 안전해요.</p>
+        </div>
+        <div class="steps">
+          <div class="step"><em>1</em><div>NH콕뱅크에서 파킹통장 + 파킹모아적금 동시 가입</div></div>
+          <div class="step"><em>2</em><div>파킹통장에 약 1,010만원 예치해 6개월 평균잔액 1,000만원 초과 유지</div></div>
+          <div class="step"><em>3</em><div>적금은 자동이체로 매월 100만원씩 12개월 납입</div></div>
+          <div class="result">
+            <span style="font-size:var(--fs-small);color:var(--ink-2);font-weight:600">1년 뒤 예상 세후 이자 (두 상품 합계)</span>
+            <div class="big">약 82만원</div>
+            <small>적금 연 10% 세후 약 55만원 + 파킹통장 세후 약 27만원. 일반과세 15.4%, 파킹통장 금리를 잔액 구간별로 적용한 추정치로 실제와 다를 수 있어요.</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Events ===== -->
+  <section id="event">
+    <div class="wrap">
+      <h2 class="sec-title">출시 기념 이벤트</h2>
+      <p class="sec-desc">가입하고, 유지하고, 함께 이용하면 이어지는 혜택이에요.</p>
+      <div class="grid g3">
+        <article class="ev e1">
+          <span class="em" aria-hidden="true">☕</span>
+          <span class="lab">EVENT 1 · 파킹통장 신규 가입</span>
+          <h3>조건 없이 메가커피<br>5천원권 100% 지급</h3>
+          <ul><li>기간: 2026.09.01 ~ 2027.02.28</li><li>대상: 기간 중 영등포농협 NH개인파킹통장 신규 가입 고객</li></ul>
+        </article>
+        <article class="ev e2">
+          <span class="em" aria-hidden="true">🎁</span>
+          <span class="lab">EVENT 2 · 두 상품 모두 가입</span>
+          <h3>매월 경품 추첨<br>커피머신 · 메가커피 1만원권</h3>
+          <ul><li>조건: 파킹모아적금에 10만원 이상 납입</li><li>한 번 당첨되면 재당첨 제외</li></ul>
+        </article>
+        <article class="ev e3">
+          <span class="em" aria-hidden="true">📈</span>
+          <span class="lab">당첨 확률 UP</span>
+          <h3>파킹통장 평잔이 높을수록<br>가중치 적용 예정</h3>
+          <ul><li>월 가입좌수 500좌 이상일 때 추첨 진행</li></ul>
+        </article>
+      </div>
+
+      <div class="tbl-wrap ev-table" role="region" aria-label="경품 표" tabindex="0">
+        <table>
+          <thead><tr><th>등수</th><th>경품</th><th>인원</th></tr></thead>
+          <tbody>
+            <tr><td class="r">1등</td><td>네스프레소 버츄오 커피머신</td><td>매월 1명</td></tr>
+            <tr><td class="r">2등</td><td>메가커피 1만원권</td><td>매월 100명</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Checklist ===== -->
+  <section id="check">
+    <div class="wrap">
+      <div class="check-head">
+        <div>
+          <h2 class="sec-title">가입 전 체크리스트</h2>
+          <p class="sec-desc" style="margin:0">하나씩 눌러서 확인해 보세요.</p>
+        </div>
+        <div class="progress" aria-live="polite">
+          <div class="progress-bar"><i id="pbar"></i></div>
+          <small id="ptext">0 / 8 완료</small>
+        </div>
+      </div>
+      <ul class="checks" id="checks">
+        <li><input type="checkbox" id="c1"><label for="c1"><span class="box"><svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg></span><span><b>NH콕뱅크 앱 설치</b><span class="d">두 상품 모두 비대면으로만 가입돼요</span></span></label></li>
+        <li><input type="checkbox" id="c2"><label for="c2"><span class="box"><svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg></span><span><b>다른 농·축협 파킹통장 보유 여부 확인</b><span class="d">전 농·축협 통틀어 1인 1계좌예요</span></span></label></li>
+        <li><input type="checkbox" id="c3"><label for="c3"><span class="box"><svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg></span><span><b>신규고객 우대 대상인지 확인</b><span class="d">직전 1년간 농·축협 입출금통장 보유이력이 없어야 해요</span></span></label></li>
+        <li><input type="checkbox" id="c4"><label for="c4"><span class="box"><svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg></span><span><b>파킹통장 + 적금 동시 가입</b><span class="d">적금은 파킹통장 보유자만 가입할 수 있어요</span></span></label></li>
+        <li><input type="checkbox" id="c5"><label for="c5"><span class="box"><svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg></span><span><b>파킹통장 평균잔액 목표 정하기</b><span class="d">1,000만원 초과면 최대 우대 +4.5%</span></span></label></li>
+        <li><input type="checkbox" id="c6"><label for="c6"><span class="box"><svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg></span><span><b>적금 자동이체 등록</b><span class="d">만기 전일까지 4회 이상이면 +0.5%</span></span></label></li>
+        <li><input type="checkbox" id="c7"><label for="c7"><span class="box"><svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg></span><span><b>적금에 10만원 이상 납입</b><span class="d">매월 경품 추첨 대상이 돼요</span></span></label></li>
+        <li><input type="checkbox" id="c8"><label for="c8"><span class="box"><svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5l3.2 3L13 4.5"/></svg></span><span><b>최종 금리·조건 재확인</b><span class="d">가입 시점에 따라 금리가 달라질 수 있어요</span></span></label></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section id="faq">
+    <div class="wrap">
+      <h2 class="sec-title">자주 묻는 질문</h2>
+      <p class="sec-desc">질문을 누르면 답이 열려요.</p>
+      <div class="faq" id="faqList">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span class="q">Q</span><span class="t">파킹통장과 적금을 동시에 가입할 수 있나요?</span><span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></span></button>
+          <div class="faq-a"><div><p>네, 동시에 가입할 수 있어요. 다만 NH파킹모아적금은 NH개인파킹통장을 보유한 개인만 가입할 수 있으니 파킹통장을 먼저 또는 함께 개설하세요.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span class="q">Q</span><span class="t">평균잔액 우대금리는 언제 적용되나요?</span><span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></span></button>
+          <div class="faq-a"><div><p>파킹통장 6개월 평균잔액 실적에 따른 우대금리는 적금 만기 때 적용돼요. 평균잔액 기준이므로 중간에 잔액을 크게 빼면 우대 구간이 낮아질 수 있어요.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span class="q">Q</span><span class="t">파킹통장에 2,000만원 넘게 넣으면 더 좋은가요?</span><span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></span></button>
+          <div class="faq-a"><div><p>2,000만원 초과 구간은 연 0.1%라 이자 효율이 낮아요. 적금 최대 우대는 평균잔액 1,000만원 초과부터 받을 수 있으니 1,000만원을 조금 넘기는 수준이면 충분해요.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span class="q">Q</span><span class="t">신규고객 우대 1.0%는 누가 받나요?</span><span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></span></button>
+          <div class="faq-a"><div><p>예금 신규일 직전 1년간 농·축협 입출금통장 보유이력이 없는 고객이에요. 거래중지계좌와 휴면계좌는 보유이력에서 빠져요. 가입일부터 6개월 동안, 200만원 이하 구간에만 적용돼요.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span class="q">Q</span><span class="t">적금에 한 번에 목돈을 넣을 수 있나요?</span><span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></span></button>
+          <div class="faq-a"><div><p>안 돼요. 월 납입한도는 100만원이고 선납이연이 불가해서, 연간 한도 1,200만원 안이라도 미리 몰아서 넣을 수 없어요.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span class="q">Q</span><span class="t">적금 판매가 끝날 수도 있나요?</span><span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></span></button>
+          <div class="faq-a"><div><p>네, 총 10,000좌 한정 판매라 소진되면 종료돼요. 관심이 있다면 빨리 가입하는 편이 좋아요.</p></div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false"><span class="q">Q</span><span class="t">경품 추첨은 매달 무조건 진행되나요?</span><span class="chev" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></span></button>
+          <div class="faq-a"><div><p>월 가입좌수가 500좌 이상일 때 추첨이 진행돼요. 두 상품 모두 가입하고 적금에 10만원 이상 납입한 고객이 대상이고, 한 번 당첨되면 재당첨에서 제외돼요.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Official links ===== -->
+  <section id="links">
+    <div class="wrap">
+      <h2 class="sec-title">공식 링크</h2>
+      <p class="sec-desc">상품 상세와 약관은 영등포농협 공식 페이지에서 확인하세요.</p>
+      <div class="links">
+        <a class="link-btn lb1" href="https://ydpnonghyup.com/event/parking" target="_blank" rel="noopener noreferrer">
+          <span>NH개인파킹통장 바로가기<small>ydpnonghyup.com/event/parking</small></span>
+          <span class="arr" aria-hidden="true">↗</span>
+        </a>
+        <a class="link-btn lb2" href="https://ydpnonghyup.com/event/moa" target="_blank" rel="noopener noreferrer">
+          <span>NH파킹모아적금 바로가기<small>ydpnonghyup.com/event/moa</small></span>
+          <span class="arr" aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+      <div class="notice">
+        <strong><span aria-hidden="true">📢</span>알려드려요</strong>
+        <p>금리·우대조건·이벤트는 2026년 9월 4일 기준이며 바뀔 수 있어요. 가입 전 NH콕뱅크에서 최종 내용을 확인하세요.</p>
+        <time datetime="2026-09-04">2026. 09. 04</time>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ===== Instagram banner (bottom) ===== -->
+<aside class="ig-banner" aria-label="인스타그램 팔로우 안내">
+  <div class="wrap">
+    <p>더 많은 꿀정보 얻고 싶다면?</p>
+    <a class="ig-pill" href="https://www.instagram.com/startup_tip_" target="_blank" rel="noopener noreferrer" aria-label="인스타그램 startup_tip_ 팔로우하기 (새 탭)">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="igg2" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#FEDA77"/><stop offset=".3" stop-color="#F58529"/><stop offset=".6" stop-color="#DD2A7B"/><stop offset=".85" stop-color="#8134AF"/><stop offset="1" stop-color="#515BD4"/></linearGradient></defs><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="url(#igg2)" stroke-width="2.2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="url(#igg2)" stroke-width="2.2"/><circle cx="17.4" cy="6.6" r="1.35" fill="url(#igg2)"/></svg>
+      <span class="ig-handle">startup_tip_</span>
+      <span class="ig-follow">팔로우하기</span>
+    </a>
+  </div>
+</aside>
+
+<footer>
+  <div class="wrap">원문 정보: 리빙 블로거 살사남 (2026.09.04) · 본 페이지는 정보 제공용이며 금융상품 가입 권유가 아닙니다.</div>
+</footer>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const open = item.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+    });
+  });
+
+  // Checklist progress
+  const boxes = document.querySelectorAll('#checks input');
+  const pbar = document.getElementById('pbar');
+  const ptext = document.getElementById('ptext');
+  function update(){
+    const done = [...boxes].filter(b => b.checked).length;
+    pbar.style.width = (done / boxes.length * 100) + '%';
+    ptext.textContent = done === boxes.length ? '모두 확인했어요 🎉' : `${done} / ${boxes.length} 완료`;
+  }
+  boxes.forEach(b => b.addEventListener('change', update));
+</script>
+</body>
+</html>
